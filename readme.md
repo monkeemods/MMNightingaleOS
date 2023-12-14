@@ -70,7 +70,7 @@ There are 2 types of trigger behavior,  `passive`  and  `reactive`.
 
 In  `passive`  mode,  it will ignore any other trigger pull in mid firing cycle.  Example for burstfire,  while it fires off all 3 burst shots,  if you pull your trigger again,  your blaster will fire a total of 3 shots with 2 trigger pull in total.
 
-In  `reactive`  mode,  it WILL NOT ignore the trigge pull in mid firing cycle.  While it still firing the first set of 3 shots,  if you press the trigger again,  a total of 6 shots will be fired.
+In  `reactive`  mode,  it WILL NOT ignore the trigger pull in mid firing cycle.  While it still firing the first set of 3 shots,  if you press the trigger again,  a total of 6 shots will be fired.
 
 This applies to semi auto as well but since the speed is too fast,  you will barely notice this unless you do it on purpose.  Using  `passive`  trigger might give you the sense of the trigger malfunction so configure this based on your preference.
 
@@ -105,3 +105,6 @@ This applies to semi auto as well but since the speed is too fast,  you will bar
 ## Note
 
 This is built for ESP32(Seeed Xiao ESP32)  but Pico W should be supported.  Since Nightingale have lesser space,  hence the Xiao ESP32 board was chosen.
+
+## Warning
+The wiring diagram DOES NOT include a diode to protect the VUSB/VIN of the MCU so you SHOULD NOT plug in battery and USB at the SAME TIME. If you want to plug in USB, then remove the battery first!
